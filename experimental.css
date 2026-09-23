@@ -1,0 +1,174 @@
+:root{
+  --ink:#171713;
+  --paper:#f1ecdf;
+  --paper2:#e4dece;
+  --red:#8f251d;
+  --line:rgba(23,23,19,.18);
+  --muted:#6e685d;
+  --serif:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  --sans:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --header-h:68px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.site-head{position:sticky;top:0;z-index:1000;height:var(--header-h);background:rgba(18,18,16,.96);color:#f4efe2;border-bottom:1px solid rgba(255,255,255,.12)}
+.site-head-in{height:100%;max-width:1440px;margin:auto;padding:0 26px;display:flex;align-items:center;gap:26px}
+.brand{font-size:1.05rem;font-weight:700;letter-spacing:.12em;text-decoration:none;margin-right:auto}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{font-size:.86rem;text-decoration:none;opacity:.76}
+.nav a:hover,.nav a.current{opacity:1}
+.menu{width:40px;height:40px;border:1px solid rgba(255,255,255,.34);border-radius:50%;background:transparent;color:#fff;font-size:22px;cursor:pointer;display:grid;place-items:center}
+.drawer{position:fixed;inset:var(--header-h) 0 auto 0;background:#171713;color:#f4efe2;z-index:999;display:none;padding:34px 26px 40px;border-top:1px solid rgba(255,255,255,.1)}
+.drawer.open{display:block}
+.drawer-in{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.drawer a{text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.eyebrow{font-family:var(--sans);font-size:.76rem;letter-spacing:.12em;color:var(--muted)}
+.brush{height:76px;width:auto;object-fit:contain;object-position:left center}
+.section-title{font-size:clamp(1.6rem,3vw,2.8rem);margin:0 0 20px;font-weight:500}
+.plain-copy{font-family:var(--sans);line-height:1.9;font-size:.94rem;color:#4c483f}
+.btn{display:inline-flex;gap:18px;align-items:center;border-top:1px solid currentColor;padding-top:10px;text-decoration:none;font-family:var(--sans);font-size:.86rem}
+
+/* 学ぶ：書庫 */
+.page-manabu{background:#eee8da}
+.library-head{padding:58px 5vw 26px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(220px,360px) 1fr;gap:7vw;align-items:end}
+.library-head h1{margin:0}
+.library-head .intro{max-width:660px}
+.era-rail{display:flex;gap:0;border-bottom:1px solid var(--line);overflow:auto;background:#e7e0d0}
+.era-rail a{min-width:150px;padding:18px 26px;text-decoration:none;border-right:1px solid var(--line);font-size:.92rem}
+.library{max-width:1400px;margin:auto;padding:44px 5vw 80px;display:grid;grid-template-columns:360px 1fr;gap:6vw}
+.library-note{position:sticky;top:110px;align-self:start;padding-right:24px;border-right:1px solid var(--line)}
+.library-note blockquote{font-size:clamp(1.35rem,2.2vw,2.3rem);line-height:1.6;margin:20px 0}
+.library-note cite{font-style:normal;font-family:var(--sans);font-size:.78rem;color:var(--muted)}
+.material-row{display:grid;grid-template-columns:82px 1fr auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.material-row .no{font-family:var(--sans);color:var(--muted);font-size:.78rem}
+.material-row h3{margin:0 0 6px;font-size:1.15rem}
+.material-row p{margin:0;font-family:var(--sans);font-size:.82rem;color:var(--muted)}
+
+/* 問う：問いが先に立つ */
+.page-tou{background:#e9e4d8}
+.question-stage{min-height:690px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.question-photo{position:absolute;right:0;top:0;width:58%;height:100%;background:url('https://doinghistory.github.io/site/tou-buddha.jpg') center 38%/cover no-repeat;filter:grayscale(.15) contrast(1.04)}
+.question-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#e9e4d8 0%,rgba(233,228,216,.82) 14%,rgba(233,228,216,0) 44%)}
+.question-copy{position:relative;z-index:1;max-width:1400px;margin:auto;padding:90px 5vw 80px;display:grid;grid-template-columns:minmax(390px,650px) 1fr}
+.question-copy h1{font-size:clamp(3rem,6vw,6.4rem);line-height:1.12;font-weight:500;margin:38px 0 30px;letter-spacing:-.04em}
+.question-copy .lead{max-width:520px}
+.question-menu{max-width:1200px;margin:auto;padding:64px 5vw 90px}
+.question-menu h2{font-size:1rem;font-family:var(--sans);font-weight:500;margin:0 0 22px}
+.question-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.question-item{padding:30px 24px 34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;min-height:190px}
+.question-item:last-child{border-right:none}
+.question-item .num{font-family:var(--sans);font-size:.75rem;color:var(--muted)}
+.question-item h3{font-size:1.55rem;margin:35px 0 10px}
+.question-item p{font-family:var(--sans);font-size:.82rem;color:var(--muted);line-height:1.7}
+
+/* 鍛える：縦に進む演習 */
+.page-kitaeru{background:#151512;color:#eee9dc}
+.training-banner{height:250px;background:url('https://doinghistory.github.io/site/kitaeru-hero-user.webp') center 54%/cover no-repeat;position:relative;border-bottom:1px solid rgba(255,255,255,.16)}
+.training-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,9,.86),rgba(10,10,9,.18) 65%,rgba(10,10,9,.38))}
+.training-banner .title{position:absolute;z-index:1;left:5vw;bottom:28px;display:flex;align-items:end;gap:26px}
+.training-banner .brush{filter:brightness(0) invert(1)}
+.training-banner p{font-family:var(--sans);font-size:.86rem;line-height:1.8;margin:0 0 8px;max-width:430px;color:#d1ccbf}
+.training{max-width:1180px;margin:auto;padding:70px 5vw 100px}
+.training-step{display:grid;grid-template-columns:120px 1fr 280px;gap:42px;padding:50px 0;border-top:1px solid rgba(255,255,255,.2);align-items:start}
+.training-step .num{font:300 3.8rem/1 var(--sans);color:#777266}
+.training-step h2{font-size:clamp(2.3rem,4vw,4rem);font-weight:500;margin:0 0 12px}
+.training-step h3{font-family:var(--sans);font-weight:500;margin:0 0 14px;font-size:1rem}
+.training-step p{font-family:var(--sans);font-size:.86rem;line-height:1.8;color:#aaa599;max-width:560px}
+.training-step .aside{font-family:var(--sans);font-size:.8rem;color:#bbb5a7;border-left:1px solid rgba(255,255,255,.2);padding-left:24px}
+.training-step .aside a{display:block;color:#eee9dc;text-decoration:none;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+
+/* 観る：ギャラリー */
+.page-miru{background:#0f0f0d;color:#f2eddf}
+.gallery-cover{min-height:calc(100vh - var(--header-h));position:relative;background:url('https://doinghistory.github.io/site/miru-hero-iris-v2.webp') 58% center/cover no-repeat}
+.gallery-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06) 40%,rgba(0,0,0,.7) 100%)}
+.gallery-cover .caption{position:absolute;z-index:1;left:5vw;right:5vw;bottom:40px;display:flex;align-items:end;justify-content:space-between;gap:30px}
+.gallery-cover .brush{height:98px;filter:brightness(0) invert(1)}
+.gallery-cover .caption p{max-width:440px;font-family:var(--sans);font-size:.84rem;line-height:1.8;margin:0;color:#ddd6c9}
+.video-wall{padding:70px 5vw 100px;max-width:1500px;margin:auto}
+.video-wall-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:16px;margin-bottom:28px}
+.video-wall-head h2{margin:0;font-size:1.5rem;font-weight:500}
+.video-wall-head p{font-family:var(--sans);font-size:.78rem;color:#aaa599;margin:0}
+.video-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}
+.video-card{position:relative;min-height:310px;background:#24231f;border:1px solid rgba(255,255,255,.1);padding:24px;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.video-card:first-child{min-height:500px;grid-row:span 2;background:linear-gradient(145deg,#342f23,#161613)}
+.video-card:before{content:"▶";position:absolute;top:22px;right:22px;border:1px solid rgba(255,255,255,.35);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:.8rem}
+.video-card h3{font-size:1.35rem;margin:0 0 8px;font-weight:500}
+.video-card p{font-family:var(--sans);font-size:.8rem;color:#aaa599;margin:0}
+
+/* 調べる：検索が主役 */
+.page-shiraberu{background:#f5f1e7}
+.search-first{max-width:1240px;margin:auto;padding:78px 5vw 40px}
+.search-first h1{font-size:clamp(2.8rem,6vw,6rem);font-weight:500;margin:20px 0 34px;letter-spacing:-.04em}
+.search-box{display:grid;grid-template-columns:1fr auto;border-bottom:2px solid var(--ink);padding:10px 0 16px}
+.search-box input{border:0;background:transparent;font:400 clamp(1.3rem,2.7vw,2.3rem)/1.4 var(--serif);outline:none;min-width:0}
+.search-box button{border:0;background:transparent;font-size:1.7rem;cursor:pointer}
+.search-help{font-family:var(--sans);font-size:.8rem;color:var(--muted);margin-top:12px}
+.reference-index{max-width:1240px;margin:auto;padding:44px 5vw 100px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.reference-block{padding:26px 22px 50px;border-right:1px solid var(--line)}
+.reference-block:last-child{border-right:0}
+.reference-block .num{font:400 .75rem var(--sans);color:var(--muted)}
+.reference-block h2{font-size:1.45rem;margin:28px 0 14px;font-weight:500}
+.reference-block p{font-family:var(--sans);font-size:.8rem;line-height:1.8;color:var(--muted)}
+.reference-block a{display:block;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.82rem}
+
+/* 巡る：雑誌 */
+.page-meguru{background:#e7e1d3}
+.mag{max-width:1460px;margin:auto;padding:46px 5vw 100px}
+.mag-mast{display:flex;align-items:end;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:28px}
+.mag-mast h1{font-size:clamp(3rem,7vw,7rem);font-weight:500;line-height:.9;margin:0;letter-spacing:-.05em}
+.mag-mast p{font-family:var(--sans);font-size:.82rem;max-width:360px;line-height:1.8;margin:0}
+.mag-grid{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:360px 280px;gap:18px}
+.mag-card{position:relative;overflow:hidden;text-decoration:none;background:#cfc7b6;min-height:0}
+.mag-card.big{grid-row:1 / span 2;background:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Nagasaki,%20Japan;%20Temple%20Street%20Wellcome%20V0037659.jpg?width=1800') center/cover no-repeat}
+.mag-card.photo2{background:url('https://doinghistory.github.io/site/assets/top-inline-01.jpg') center/cover no-repeat}
+.mag-card.photo3{background:url('https://doinghistory.github.io/site/assets/top-inline-03.jpg') center/cover no-repeat}
+.mag-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.72))}
+.mag-card .text{position:absolute;z-index:1;left:24px;right:24px;bottom:22px;color:white}
+.mag-card .text .tag{font-family:var(--sans);font-size:.72rem;margin-bottom:8px;opacity:.8}
+.mag-card h2{font-size:clamp(1.4rem,2.5vw,2.5rem);font-weight:500;margin:0 0 8px}
+.mag-card p{font-family:var(--sans);font-size:.8rem;line-height:1.7;margin:0;max-width:620px}
+.mag-list{margin-top:54px;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.mag-list h3{font-size:1.3rem;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:12px;margin:0}
+.mag-entry{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.mag-entry .thumb{background:#c9c1b0;aspect-ratio:4/3}
+.mag-entry b{font-weight:500}
+.mag-entry p{font-family:var(--sans);font-size:.78rem;color:var(--muted);line-height:1.7;margin:7px 0 0}
+
+.prototype-note{position:fixed;right:14px;bottom:14px;z-index:1200;background:#8f251d;color:#fff;font:600 11px var(--sans);letter-spacing:.08em;padding:8px 10px}
+
+@media(max-width:900px){
+  .nav{display:none}
+  .library-head,.library{grid-template-columns:1fr}
+  .library-note{position:static;border-right:0;border-bottom:1px solid var(--line);padding-bottom:30px}
+  .question-photo{width:100%;opacity:.34}
+  .question-copy{grid-template-columns:1fr}
+  .question-list{grid-template-columns:1fr}
+  .question-item{border-right:0}
+  .training-step{grid-template-columns:70px 1fr}
+  .training-step .aside{grid-column:2;border-left:0;padding-left:0}
+  .video-grid{grid-template-columns:1fr}
+  .video-card:first-child{min-height:360px;grid-row:auto}
+  .reference-index{grid-template-columns:1fr 1fr}
+  .mag-grid{grid-template-columns:1fr;grid-template-rows:460px 260px 260px}
+  .mag-card.big{grid-row:auto}
+  .mag-list{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .site-head-in{padding:0 16px}
+  .drawer-in{grid-template-columns:1fr 1fr}
+  .library-head,.library,.question-copy,.question-menu,.training,.video-wall,.search-first,.reference-index,.mag{padding-left:20px;padding-right:20px}
+  .material-row{grid-template-columns:48px 1fr}
+  .material-row>span:last-child{display:none}
+  .question-copy h1{font-size:3.2rem}
+  .training-step{grid-template-columns:1fr}
+  .training-step .aside{grid-column:auto}
+  .training-step .num{font-size:2rem}
+  .gallery-cover .caption{display:block;left:20px;right:20px}
+  .gallery-cover .caption p{margin-top:18px}
+  .reference-index{grid-template-columns:1fr}
+  .reference-block{border-right:0;border-bottom:1px solid var(--line)}
+  .mag-list{gap:30px}
+}
